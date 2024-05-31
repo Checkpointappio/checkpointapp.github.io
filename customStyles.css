@@ -1,0 +1,28 @@
+/* Keyframes for the slide up effect with speed ramp */
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  30% {
+    transform: translateY(0);
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  70% {
+    transform: translateY(0);
+    opacity: 1;
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+/* Style for the dynamic text */
+#flipping-text {
+  display: inline-block;
+  animation: slideUp 2000ms infinite;
+  animation-fill-mode: both; /* Ensure the element retains its state at 0% and 100% */
+}
